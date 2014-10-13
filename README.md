@@ -1,4 +1,4 @@
-goagent 3.2.0 正式版下载 [http://git.io/goa](https://coding.net/u/phuslu/p/goagent/git/archive/3.0) (由 [coding.net](http://coding.net) 提供)
+goagent 3.2.0 正式版下载 [http://git.io/goa](https://nodeload.github.com/goagent/goagent/legacy.zip/3.0)  [国内镜像](https://coding.net/u/phuslu/p/goagent/git/archive/3.0) (由 [coding.net](http://coding.net) 提供)
 
 ## 简易教程
 
