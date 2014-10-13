@@ -5,9 +5,9 @@ goagent 3.2.0 正式版下载 [http://git.io/goa](https://nodeload.github.com/go
 - 部署
 
   1. 申请 Google Appengine 并创建 appid。
-  2. 下载 goagent 最新版 https://github.com/goagent/goagent
-  3. 修改 proxy.ini 中的 [gae] 下的 appid = 你的appid(多appid请用|隔开)
-  4. 运行 uploader.bat 或 uploader.py 开始上传, 成功后即可使用了。
+  1. 下载 goagent 最新版 https://github.com/goagent/goagent
+  1. 修改 proxy.ini 中的 [gae] 下的 appid = 你的appid(多appid请用|隔开)
+  1. 运行 uploader.bat 或 uploader.py 开始上传, 成功后即可使用了。
 
 - 使用
 
