@@ -19,7 +19,7 @@
         } else {
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        request.onreadystatechange = render
+        request.onreadystatechange = render;
         request.open("GET", "./README.md", true);
         request.send();
         function render() {
