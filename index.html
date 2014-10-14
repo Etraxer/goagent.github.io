@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <script>
+        if (document.location.href.indexOf("http://") == 0) {
+            document.location = document.location.href.replace("http:", "https:", 1);
+        }
     <link rel="stylesheet" href="github-markdown.css">
     <script src="marked.js"></script>
   </head>
@@ -10,16 +14,15 @@
     <div id="content" class="markdown-body"></div>
     <script>
     (function() {
-        if (document.location.href.indexOf("http://") == 0) {
-            document.location = document.location.href.replace("http:", "https:", 1);
-            return;
-        }
         if (window.XMLHttpRequest) {
             var request = new XMLHttpRequest();
         } else {
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        request.onreadystatechange = function() {
+        request.onreadystatechange = render
+        request.open("GET", "./README.md", true);
+        request.send();
+        function render() {
             if (request.readyState == 4) {
                 if (request.status >= 200 && request.status < 400){
                     document.getElementById("content").innerHTML = marked(request.responseText);
@@ -28,8 +31,6 @@
                 }
             }
         }
-        request.open("GET", "./README.md", true);
-        request.send();
     })();
     </script>
   </body>
