@@ -21,8 +21,8 @@
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = render;
-        var groups = document.location.href.match('\\?(.+\.md)$');
-        request.open('GET', groups ? groups[1] : "index.md", true);
+        var path = document.location.href.indexOf('?#') > 0 ? document.location.href.split('#')[1] : "index.md";
+        request.open('GET', path, true);
         request.send();
         function render() {
             if (request.readyState == 4) {
