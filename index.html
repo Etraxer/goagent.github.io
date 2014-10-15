@@ -21,7 +21,8 @@
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = render;
-        request.open("GET", "./README.md", true);
+        var groups = document.location.href.match('\\?(.+\.md)$');
+        request.open('GET', groups ? groups[1] : "index.md", true);
         request.send();
         function render() {
             if (request.readyState == 4) {
