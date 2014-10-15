@@ -17,16 +17,16 @@ goagent 3.2.0 正式版下载 [http://git.io/goa](https://nodeload.github.com/go
   * 出现连接不上的情况可以尝试使用 [GoGo Tester](https://github.com/azzvx/gogotester/raw/2.3/GoGo%20Tester/bin/Release/GoGo%20Tester.exe) 测速。
 
 ## 图文教程
-* https://goagent.github.io/?#/wiki/InstallGuide.md
+* https://goagent.github.io/?/wiki/InstallGuide.md
 
 ## 常见问题
-* https://goagent.github.io/?#/wiki/FAQ.md
+* https://goagent.github.io/?/wiki/FAQ.md
 
 ## 配置介绍
-* https://goagent.github.io/?#/wiki/ConfigIntroduce.md
+* https://goagent.github.io/?/wiki/ConfigIntroduce.md
 
 ## 更新历史
-* https://goagent.github.io/?#/wiki/History.md
+* https://goagent.github.io/?/wiki/History.md
 
 ## 讨论区
 * https://code.google.com/p/goagent/issues/list

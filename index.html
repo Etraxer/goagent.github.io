@@ -21,7 +21,10 @@
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = render;
-        var path = document.location.href.indexOf('?#') > 0 ? document.location.href.split('#')[1] : "index.md";
+        var path = "index.md";
+        if (document.location.href.indexOf('?') > 0) {
+            path = document.location.href.substring(document.location.href.indexOf('?')+1);
+        }
         request.open('GET', path, true);
         request.send();
         function render() {
