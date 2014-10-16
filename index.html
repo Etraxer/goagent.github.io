@@ -21,11 +21,11 @@
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = render;
-        var path = "index.md";
+        var path = "README.md";
         if (document.location.href.indexOf('?') > 0) {
             path = document.location.href.substring(document.location.href.indexOf('?')+1);
         }
-        request.open('GET', path, true);
+        request.open('GET', 'goagent' + path, true);
         request.send();
         function render() {
             if (request.readyState == 4) {
