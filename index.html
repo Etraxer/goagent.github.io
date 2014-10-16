@@ -21,7 +21,7 @@
             var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = render;
-        var path = "README.md";
+        var path = "/README.md";
         if (document.location.href.indexOf('?') > 0) {
             path = document.location.href.substring(document.location.href.indexOf('?')+1);
         }
