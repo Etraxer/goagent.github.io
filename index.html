@@ -17,6 +17,9 @@
     <div id="content" class="markdown-body"></div>
     <script>
     (function() {
+        if (document.location.href.indexOf('https:') < 0) {
+            return;
+        }
         if (window.XMLHttpRequest) {
             var request = new XMLHttpRequest();
         } else {
