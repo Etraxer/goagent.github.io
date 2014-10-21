@@ -34,11 +34,13 @@
         function render() {
             if (request.readyState == 4) {
                 if (request.status >= 200 && request.status < 400){
-                    var text = request.responseText;
-                    document.getElementById("content").innerHTML = marked(text);
-                    document.title = "GoAgent · " + text.split("\n")[0].replace(/#*/, "").trim();
+                    document.getElementById("content").innerHTML = marked(request.responseText);
+                    var firstline = request.responseText.split("\n")[0];
+                    if (firstline.indexOf('#') == 0) {
+                      document.title = 'GoAgent · ' + firstline.replace(/#*/, '').trim();
+                    }
                 } else {
-                    document.location = "https://github.com/goagent/goagent";
+                    document.location = 'https://github.com/goagent/goagent';
                 }
             }
         }
