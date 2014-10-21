@@ -36,7 +36,7 @@
                 if (request.status >= 200 && request.status < 400){
                     var text = request.responseText;
                     document.getElementById("content").innerHTML = marked(text);
-                    document.title = "GoAgent · " + text.split("\n")[0].replace("#", "").trim();
+                    document.title = "GoAgent · " + text.split("\n")[0].replace("##", "").trim();
                 } else {
                     document.location = "https://github.com/goagent/goagent";
                 }
