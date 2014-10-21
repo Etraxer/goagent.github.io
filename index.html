@@ -34,13 +34,13 @@
         function render() {
             if (request.readyState == 4) {
                 if (request.status >= 200 && request.status < 400){
-                    document.getElementById("content").innerHTML = marked(request.responseText);
                     var firstline = request.responseText.split("\n")[0];
                     if (firstline.indexOf('#') == 0) {
                       document.title += firstline.replace(/#*/, '').trim();
                     } else {
                       document.title += 'A GAE Proxy';
                     }
+                    document.getElementById("content").innerHTML = marked(request.responseText);
                 } else {
                     document.location = 'https://github.com/goagent/goagent';
                 }
