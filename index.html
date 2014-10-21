@@ -35,6 +35,7 @@
             if (request.readyState == 4) {
                 if (request.status >= 200 && request.status < 400){
                     document.getElementById("content").innerHTML = marked(request.responseText);
+                    document.getElementsByTagName('title')[0].innerHTML = "GoAgent · " + document.getElementsByTagName('h1')[0].innerHTML;
                 } else {
                     document.location = "https://github.com/goagent/goagent";
                 }
