@@ -36,7 +36,7 @@
                 if (request.status >= 200 && request.status < 400){
                     var firstline = request.responseText.split("\n")[0];
                     if (firstline.indexOf('#') == 0) {
-                      document.title += ' ' + firstline.replace(/#*/, '')..replace(/\s+/, '');
+                      document.title += ' ' + firstline.replace(/#*/, '').replace(/\s+/, '');
                     } else {
                       document.title += ' A GAE Proxy';
                     }
