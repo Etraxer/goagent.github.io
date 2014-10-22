@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <script>
-        if (document.location.href.indexOf("http://") == 0) {
-            document.location = document.location.href.replace("http:", "https:", 1);
+        if (location.href.indexOf("http://") == 0) {
+            location = location.href.replace("http:", "https:", 1);
         }
     </script>
     <title>GoAgent ·</title>
@@ -16,7 +16,7 @@
     <div id="content" class="markdown-body"></div>
     <script>
     (function() {
-        if (document.location.href.indexOf('https:') < 0) {
+        if (location.href.indexOf('https:') < 0) {
             return;
         }
         if (window.XMLHttpRequest) {
@@ -26,8 +26,8 @@
         }
         request.onreadystatechange = render;
         var path = "/goagent/README.md";
-        if (document.location.href.indexOf('?') > 0) {
-            path = document.location.href.substring(document.location.href.indexOf('?')+1);
+        if (location.href.indexOf('?') > 0) {
+            path = location.href.substring(location.href.indexOf('?')+1);
         }
         request.open('GET', path, true);
         request.send();
@@ -42,7 +42,7 @@
                     }
                     document.getElementById("content").innerHTML = marked(request.responseText);
                 } else {
-                    document.location = 'https://github.com/goagent/goagent';
+                    location = 'https://github.com/goagent/goagent';
                 }
             }
         }
