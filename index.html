@@ -18,13 +18,12 @@
     (function() {
         if (location.href.indexOf('https:') < 0) {
             return;
-        } else if (location.href.indexOf('?') < 0) {
-            // var path = "https://api.github.com/repos/goagent/goagent/readme";
+        }
+        if (location.href.indexOf('?') < 0) {
             location = 'https://github.com/goagent/goagent';
             return;
-        } else {
-            var path = location.href.substring(location.href.indexOf('?')+1);
         }
+        var path = location.href.substring(location.href.indexOf('?')+1);
         if (window.XMLHttpRequest) {
             var request = new XMLHttpRequest();
         } else {
