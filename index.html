@@ -157,7 +157,7 @@
                 if (request.status >= 200 && request.status < 400){
                     var text = request.responseText;
                     if (path.indexOf('://api.github.com/') >= 0) {
-                      text = B64.decode(JSON.parse(text)['content']);
+                      text = B64.fromUtf8(JSON.parse(text)['content']);
                     }
                     var firstline = text.split("\n")[0];
                     if (firstline.indexOf('#') == 0) {
