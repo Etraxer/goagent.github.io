@@ -24,6 +24,10 @@
             return;
         }
         var path = location.href.substring(location.href.indexOf('?')+1);
+        if (true) {
+          location = 'https://github.com/goagent/goagent/blob' + path;
+          return;
+        }
         if (window.XMLHttpRequest) {
             var request = new XMLHttpRequest();
         } else {
